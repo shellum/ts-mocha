@@ -7,6 +7,9 @@ try {
   require('ts-node').register({
     project,
     transpileOnly: true,
+    compilerOptions: {
+      module: "commonjs",
+    },
   });
   // opt-in tsconfig-paths config
   if (process.env.TS_CONFIG_PATHS) {
